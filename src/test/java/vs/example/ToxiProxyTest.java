@@ -31,7 +31,7 @@ public class ToxiProxyTest {
 
     @Test
     public void testNetworkOutage() {
-        ToxiproxyContainer.ContainerProxy proxy = toxiproxy.getProxy(simpleServer, simpleServer.getMappedPort(4567));
+        ToxiproxyContainer.ContainerProxy proxy = toxiproxy.getProxy(simpleServer, 4567);
         final String ipAddressViaToxiproxy = proxy.getContainerIpAddress();
         final int portViaToxiproxy = proxy.getProxyPort();
 
